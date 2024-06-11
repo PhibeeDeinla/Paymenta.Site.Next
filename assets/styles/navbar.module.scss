@@ -1,0 +1,11 @@
+@import './variable.module.scss';
+
+.nav {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbarAnchor {
+    color: white;
+}
