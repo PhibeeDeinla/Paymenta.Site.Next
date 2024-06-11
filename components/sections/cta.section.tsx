@@ -10,7 +10,7 @@ type Props = {}
 
 const CTASection = (props: Props) => {
     return (
-        <div className={`${styles.ctaSection} max-w-screen-2xl mx-auto h-full rounded-3xl flex flex-col justify-center py-0`}>
+        <div className={`${styles.ctaSection} max-w-screen-2xl mx-auto h-full rounded-3xl flex flex-col justify-center py-0 mb-32`}>
             <div className="h-full flex flex-row items-center">
                 <div className="basis-3/4 pr-[200px] py-10 px-10">
                     <h1 className="text-white text-5xl font-semibold tracking-wide mb-5">

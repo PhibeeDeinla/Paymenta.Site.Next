@@ -2,4 +2,7 @@
 
 .ctaSection {
     background-color: $primary-color;
+    background-image: url('../images/cta_donut_gradient_1.png'), url('../images/cta_donut_gradient_2.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, top right;
 }
