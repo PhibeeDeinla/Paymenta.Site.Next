@@ -1,5 +1,6 @@
 import NavBar from '@/components/navbar'
 import AboutSection from '@/components/sections/about.section'
+import CTASection from '@/components/sections/cta.section'
 import FeatureSection from '@/components/sections/feature.section'
 import HeroSection from '@/components/sections/hero.section'
 import PartnerSection from '@/components/sections/partners.section'
@@ -18,6 +19,7 @@ const Page = (props: Props) => {
                 <ServicesSection />
                 <AboutSection />
                 <PartnerSection />
+                <CTASection />
             </main>
         </>
     )
