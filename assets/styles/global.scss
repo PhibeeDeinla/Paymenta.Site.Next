@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header__title {
+    position: relative;
+    isolation: isolate;
+    z-index: 0;
+
+    &::before {
+        content: attr(data-label);
+        position: absolute;
+        z-index: -1;
+        top: -0.04rem;
+        right: 50%;
+        transform: translate(50%, -50%);
+        color: #edeff5;
+
+        @apply text-8xl font-extrabold;
+    }
+}

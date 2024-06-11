@@ -11,6 +11,7 @@ const Page = (props: Props) => {
             <NavBar />
             <main>
                 <HeroSection />
+                <FeatureSection />
             </main>
         </>
     )

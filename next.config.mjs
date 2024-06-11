@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
+
+import path from 'path'
+const __dirname = path.resolve()
+
 const nextConfig = {
     webpack(config) {
         config.module.rules.push({
@@ -7,6 +11,9 @@ const nextConfig = {
         })
 
         return config
+    },
+    sassOptions: {
+        includePaths: [path.join(__dirname, 'assets/styles')],
     },
 }
 

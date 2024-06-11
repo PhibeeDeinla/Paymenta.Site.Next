@@ -1,3 +1,5 @@
+import { ElementType } from 'react'
+
 export interface TLinkProps {
     href: string
     title: string
@@ -7,4 +9,10 @@ export interface TLinkProps {
 export interface TStatisticsProps {
     title: string
     counter: number
+}
+
+export interface TFeatureProps {
+    icon: ElementType
+    title: string
+    description?: string
 }
