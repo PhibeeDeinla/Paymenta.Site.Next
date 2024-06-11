@@ -12,7 +12,12 @@ export interface TStatisticsProps {
 }
 
 export interface TFeatureProps {
-    icon: ElementType
+    icon?: ElementType
+    title: string
+    description?: string
+}
+
+export interface TServicesProps {
     title: string
     description?: string
 }

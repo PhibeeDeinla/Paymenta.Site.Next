@@ -35,9 +35,11 @@ const FeatureSection = (props: Props) => {
                 <ul className="inline-flex lg:space-x-64">
                     {featuresList.map(({ icon: Icon, ...item }) => (
                         <li className="inline-flex flex-col">
-                            <span className="inline-block mx-auto bg-primary text-white rounded-full p-4 text-2xl">
-                                <Icon />
-                            </span>
+                            {Icon && (
+                                <span className="inline-block mx-auto bg-primary text-white rounded-full p-4 text-2xl">
+                                    <Icon />
+                                </span>
+                            )}
                             <div className="text-primary text-lg text-center pt-4">{item.title}</div>
                             <div className="px-5 font-thin tracking-wide text-center pt-6">{item.description}</div>
                         </li>
