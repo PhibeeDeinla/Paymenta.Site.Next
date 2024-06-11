@@ -29,7 +29,11 @@ const FeatureSection = (props: Props) => {
     return (
         <div className={`${styles.featureSection} bg-[#F7F9FF]`}>
             <div className="max-w-screen-2xl mx-auto h-full">
-                <HeaderTitle label="Features" />
+                <HeaderTitle
+                    label="Features"
+                    className="pt-32 mb-20"
+                    align="center"
+                />
 
                 {/* Features List */}
                 <ul className="inline-flex lg:space-x-64">

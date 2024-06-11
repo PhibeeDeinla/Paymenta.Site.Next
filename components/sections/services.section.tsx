@@ -27,7 +27,7 @@ const ServicesSection = (props: Props) => {
             <div className="max-w-screen-2xl mx-auto h-full">
                 <div className="grid grid-cols-3 gap-4 h-full items-center">
                     <div className="col-span-1">
-                        <HeaderTitle label="Services" />
+                        <HeaderTitle label="Services" className='py-5'/>
 
                         <p className="px-5 font-thin tracking-wide pt-6">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus molestie euismod ex non bibendum. Suspendisse potenti. Ut quis

@@ -14,3 +14,20 @@
     mix-blend-mode: multiply;
     filter: blur(3px);
 }
+
+.video_player {
+    position: relative;
+    z-index: 0;
+
+    &::after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        bottom: -10%;
+        left: -15%;
+        background-image: url('../images/dotted.png');
+        background-repeat: no-repeat;
+        width: 189px;
+        height: 189px;
+    }
+}

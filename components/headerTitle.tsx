@@ -15,6 +15,7 @@ const SpanStyled = styled.span<Pick<Props, 'label' | 'shadowOpacity'>>`
         z-index: -1;
         top: -1.04rem;
         color: #161b31;
+        white-space: nowrap;
         opacity: ${(props) => props.shadowOpacity};
 
         ${tw`text-8xl font-extrabold`}
