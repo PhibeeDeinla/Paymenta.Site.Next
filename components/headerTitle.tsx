@@ -1,6 +1,7 @@
 'use client'
 import tw from 'twin.macro'
 import styled from '@emotion/styled'
+import { PropsWithChildren, ReactNode } from 'react'
 
 const SpanStyled = styled.span<Pick<Props, 'label' | 'shadowOpacity'>>`
     & {
@@ -13,7 +14,7 @@ const SpanStyled = styled.span<Pick<Props, 'label' | 'shadowOpacity'>>`
         content: ${(props) => `'${props.label}'`};
         position: absolute;
         z-index: -1;
-        top: -1.04rem;
+        top: -0.04rem;
         color: #161b31;
         white-space: nowrap;
         opacity: ${(props) => props.shadowOpacity};
@@ -56,9 +57,10 @@ type Props = {
      * @default center
      */
     align?: 'center' | 'left' | 'right'
+    children?: ReactNode
 }
 
-const HeaderTitle = ({ align = 'center', className, label, labelClassName, shadowOpacity = DEFAULT_SHADOW_OPACITY }: Props) => {
+const HeaderTitle = ({ align = 'center', className, label, labelClassName, shadowOpacity = DEFAULT_SHADOW_OPACITY, children }: Props) => {
     return (
         <div className={`text-${align} text-primary uppercase font-semibold text-4xl ${className}`}>
             <SpanStyled
@@ -67,6 +69,7 @@ const HeaderTitle = ({ align = 'center', className, label, labelClassName, shado
                 className={`${labelClassName} ${align}`}>
                 {label}
             </SpanStyled>
+            {children}
         </div>
     )
 }

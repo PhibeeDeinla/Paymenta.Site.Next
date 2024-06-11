@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image'
 import { ElementType } from 'react'
 
 export interface TLinkProps {
@@ -18,6 +19,12 @@ export interface TFeatureProps {
 }
 
 export interface TServicesProps {
+    title: string
+    description?: string
+}
+
+export interface TPartnerProps {
+    icon: StaticImageData | string
     title: string
     description?: string
 }
