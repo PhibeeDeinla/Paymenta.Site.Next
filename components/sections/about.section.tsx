@@ -8,9 +8,9 @@ const AboutSection = (props: Props) => {
     return (
         <div className={`${styles.aboutSection} `}>
             <div className="image-container"></div>
-            <div className="max-w-screen-2xl mx-auto h-full">
-                <div className="grid grid-cols-2 gap-4 h-full items-center space-x-56">
-                    <div className="col-span-1 mix-blend-luminosity">
+            <div className="px-4 max-w-screen-2xl mx-auto h-full py-20 lg:py-32">
+                <div className="lg:grid lg:grid-cols-2 gap-4 h-full items-center lg:space-x-56">
+                    <div className="lg:col-span-1 mix-blend-luminosity">
                         <HeaderTitle
                             label="About Us"
                             labelClassName="text-white"
@@ -30,7 +30,7 @@ const AboutSection = (props: Props) => {
                         </p>
                     </div>
 
-                    <div className="col-span-1">
+                    <div className="mt-10 lg:mt-0 lg:col-span-1">
                         {/* Video Player */}
                         <VideoPlayer />
                     </div>

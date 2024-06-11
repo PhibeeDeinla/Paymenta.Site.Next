@@ -122,7 +122,7 @@ type Props = {}
 const FooterSection = (props: Props) => {
     return (
         <div className={`${styles.footerSection} `}>
-            <div className="max-w-screen-2xl mx-auto h-full py-20">
+            <div className="px-4 max-w-screen-2xl mx-auto h-full py-20 lg:py-32">
                 <a
                     href="#"
                     className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -132,12 +132,12 @@ const FooterSection = (props: Props) => {
                     />
                 </a>
 
-                <div className="footer_outer_container grid grid-cols-4 border-y-blue-600 border-y-2 mt-20 py-16 mb-10">
+                <div className="footer_outer_container grid lg:grid-cols-4 border-y-blue-600 border-y-2 mt-20 py-16 mb-10">
                     {/* Footer Links */}
-                    <div className="footer_links_container col-span-3 grid grid-cols-4 gap-4">
+                    <div className="footer_links_container col-span-3 grid lg:grid-cols-4 gap-4">
                         {map(footerLinkListGrouped, (groupItem, key) => (
-                            <div>
-                                <div className="text-white uppercase mb-4 text-2xl font-bold tracking-wide">{key}</div>
+                            <div className="mb-5">
+                                <div className="text-white uppercase mb-4 text-2xl font-bold tracking-wide text-center lg:text-left">{key}</div>
                                 <ul className="leading-[50px]">
                                     {map(groupItem, (item) => (
                                         <li>
@@ -163,18 +163,22 @@ const FooterSection = (props: Props) => {
                         <Link
                             href={`#`}
                             title="Contacts"
-                            className={`bg-white text-primary rounded-full px-4 py-3 tracking-wide text-xl`}>
+                            className={`bg-white text-primary rounded-full px-4 py-3 tracking-wide text-xl block lg:inline`}>
                             Subscribe
                         </Link>
                     </div>
                 </div>
 
                 {/* Footer Bottom */}
-                <div className="text-white flex flex-row justify-between">
-                    <div className="text-xl tracking-wide font-light">Copyright &copy; 2024. DSSC Tech | All Rights Reserved.</div>
+                <div className="text-white flex flex-col lg:flex-row justify-between">
+                    <div className="text-xl tracking-wide font-light mb-10 text-center lg:text-left">
+                        Copyright &copy; 2024.
+                        <br className="lg:hidden" />
+                        DSSC Tech | All Rights Reserved.
+                    </div>
                     <div>
                         {/* Social links */}
-                        <ul className="inline-flex space-x-8">
+                        <ul className="flex lg:inline-flex space-x-8 justify-center">
                             {map(socialLinks, ({ icon: Icon, ...item }) => (
                                 <li>
                                     <a

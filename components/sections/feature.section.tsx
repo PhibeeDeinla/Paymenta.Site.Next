@@ -27,18 +27,18 @@ type Props = {}
 
 const FeatureSection = (props: Props) => {
     return (
-        <div className={`${styles.featureSection} bg-[#F7F9FF]`}>
+        <div className={`${styles.featureSection} bg-[#F7F9FF] py-20 lg:py-32`}>
             <div className="max-w-screen-2xl mx-auto h-full">
                 <HeaderTitle
                     label="Features"
-                    className="pt-32 mb-20"
+                    className="mb-10 lg:mb-20"
                     align="center"
                 />
 
                 {/* Features List */}
-                <ul className="inline-flex lg:space-x-64">
+                <ul className="inline-flex flex-wrap lg:flex-nowrap lg:space-x-64">
                     {featuresList.map(({ icon: Icon, ...item }) => (
-                        <li className="inline-flex flex-col">
+                        <li className="inline-flex lg:flex-nowrap flex-col">
                             {Icon && (
                                 <span className="inline-block mx-auto bg-primary text-white rounded-full p-4 text-2xl">
                                     <Icon />

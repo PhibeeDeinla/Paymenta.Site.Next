@@ -57,16 +57,16 @@ type Props = {}
 const PartnerSection = (props: Props) => {
     return (
         <div className={`${styles.partnersSection}`}>
-            <div className="max-w-screen-2xl mx-auto h-full">
+            <div className="px-4 max-w-screen-2xl mx-auto h-full py-20 lg:py-32">
                 <HeaderTitle
                     label="Partners"
-                    className="pt-32 mb-20"
+                    className="lg:pt-32 lg:mb-20"
                     align="center">
                     <small className="block font-normal text-[16px] mt-5 text-gray-400">TRUSTED BY SOME AFFILIATE COMPANIES</small>
                 </HeaderTitle>
 
                 {/* Partners Company Logos */}
-                <div className="grid grid-cols-3 gap-4 h-full items-center">
+                <div className="grid lg:grid-cols-3 gap-4 h-full items-center px-20 lg:px-0">
                     {partnersList.map(({ icon, ...item }) => (
                         <div className="inline-flex flex-col items-center justify-center py-5 lg:px-20">
                             <Image

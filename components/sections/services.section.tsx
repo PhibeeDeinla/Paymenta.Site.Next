@@ -24,8 +24,8 @@ type Props = {}
 const ServicesSection = (props: Props) => {
     return (
         <div className={`${styles.servicesSection}`}>
-            <div className="max-w-screen-2xl mx-auto h-full">
-                <div className="grid grid-cols-3 gap-4 h-full items-center">
+            <div className="px-4 max-w-screen-2xl mx-auto h-full py-20 lg:py-32">
+                <div className="lg:grid lg:grid-cols-3 gap-4 h-full items-center">
                     <div className="col-span-1">
                         <HeaderTitle
                             label="Services"
@@ -37,9 +37,9 @@ const ServicesSection = (props: Props) => {
                             pretium odio, ut faucibus velit. Phasellus eget dui libero. Maecenas malesuada nisi a est sagittis tincidunt.{' '}
                         </p>
                     </div>
-                    <div className="col-span-2 px-10">
+                    <div className="col-span-2 lg:px-10">
                         {/* Services List */}
-                        <ul className="inline-flex lg:space-x-0">
+                        <ul className="flex flex-wrap lg:inline-flex lg:flex-nowrap lg:space-x-0">
                             {servicesList.map(({ ...item }) => (
                                 <li className="ease-out duration-300 transition-all group inline-flex flex-col bg-white hover:bg-primary shadow-lg px-8 py-10">
                                     <div className="group-hover:text-white text-primary text-lg pt-4">{item.title}</div>
