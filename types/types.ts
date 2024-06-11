@@ -28,3 +28,15 @@ export interface TPartnerProps {
     title: string
     description?: string
 }
+
+export interface TFooterLinkProps {
+    category: string
+    title: string
+    href: string
+}
+
+export interface TSocialLinkProps {
+    icon?: ElementType
+    title: string
+    href: string
+}

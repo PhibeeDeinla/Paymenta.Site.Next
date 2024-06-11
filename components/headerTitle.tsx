@@ -1,7 +1,7 @@
 'use client'
 import tw from 'twin.macro'
 import styled from '@emotion/styled'
-import { PropsWithChildren, ReactNode } from 'react'
+import { ReactNode } from 'react'
 
 const SpanStyled = styled.span<Pick<Props, 'label' | 'shadowOpacity'>>`
     & {

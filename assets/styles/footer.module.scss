@@ -1,0 +1,9 @@
+@import './variable.module.scss';
+
+.footerSection {
+    height: 890px;
+    background-color: $primary-color;
+    background-image: url('../images/footer_donut_gradient_1.png'), url('../images/footer_donut_gradient_2.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom left, bottom right;
+}
