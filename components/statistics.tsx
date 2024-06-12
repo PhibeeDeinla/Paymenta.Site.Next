@@ -32,8 +32,8 @@ const Statistics = (props: Props) => {
             animate="visible"
             initial="hidden"
             className="flex text-white space-x-16 justify-center lg:justify-normal">
-            {statistics_Data.map((item) => (
-                <li className="flex flex-col items-center justify-center">
+            {statistics_Data.map((item, indx) => (
+                <li key={indx} className="flex flex-col items-center justify-center">
                     <span className="text-2xl md:text-4xl">{`${item.counter}+`}</span>
                     <span className="font-thin">{item.title}</span>
                 </li>

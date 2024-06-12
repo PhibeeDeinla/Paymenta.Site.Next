@@ -46,9 +46,10 @@ const ServicesSection = (props: Props) => {
                             variants={staggerContainer}
                             initial="hidden"
                             className="flex flex-wrap lg:inline-flex lg:flex-nowrap lg:space-x-0 justify-center">
-                            {servicesList.map(({ ...item }) => (
+                            {servicesList.map(({ ...item }, indx) => (
                                 <AnimatedMotion
                                     as={'li'}
+                                    key={indx}
                                     variants={staggerChildren}
                                     className="ease-out duration-300 transition-all group inline-flex flex-col bg-white hover:bg-primary shadow-lg px-8 py-10">
                                     <div className="group-hover:text-white text-primary text-lg pt-4">{item.title}</div>

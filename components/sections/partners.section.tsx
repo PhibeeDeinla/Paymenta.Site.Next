@@ -72,8 +72,9 @@ const PartnerSection = (props: Props) => {
                     variants={staggerContainer}
                     initial="hidden"
                     className="grid lg:grid-cols-3 gap-4 h-full items-center px-20 lg:px-0">
-                    {partnersList.map(({ icon, ...item }) => (
+                    {partnersList.map(({ icon, ...item }, indx) => (
                         <AnimatedMotion
+                        key={indx}
                             variants={staggerChildren}
                             className="inline-flex flex-col items-center justify-center py-5 lg:px-20">
                             <Image
