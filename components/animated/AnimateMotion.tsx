@@ -1,10 +1,8 @@
 'use client'
-import { AnimatePresence, Variants, animate, useAnimation, useAnimationControls, useInView } from 'framer-motion'
-import { ElementType, PropsWithChildren, useEffect, useMemo, useRef, useState } from 'react'
+import { Variants } from 'framer-motion'
+import { ElementType, PropsWithChildren } from 'react'
 import { MotionBox } from './MotionBox'
-// import { useInView } from 'react-intersection-observer'
 import useFramerScrollAnimation from '@/hooks/useFramerScrollAnimation'
-import useIntersection from '@/hooks/useIntersection'
 
 type Props = PropsWithChildren<{
     as?: ElementType
