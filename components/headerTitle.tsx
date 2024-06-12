@@ -2,6 +2,8 @@
 import tw from 'twin.macro'
 import styled from '@emotion/styled'
 import { ReactNode } from 'react'
+import AnimatedMotion from './animated/AnimateMotion'
+import { fadeInUp } from '@/utils/animation'
 
 const SpanStyled = styled.span<Pick<Props, 'label' | 'shadowOpacity'>>`
     & {
@@ -62,7 +64,15 @@ type Props = {
 
 const HeaderTitle = ({ align = 'center', className, label, labelClassName, shadowOpacity = DEFAULT_SHADOW_OPACITY, children }: Props) => {
     return (
-        <div className={`text-${align} text-primary uppercase font-semibold text-4xl ${className}`}>
+        <AnimatedMotion
+            initial="hidden"
+            variants={{
+                hidden: fadeInUp.hidden,
+                visible: {
+                    ...fadeInUp.visible,
+                },
+            }}
+            className={`text-${align} text-primary uppercase font-semibold text-4xl ${className}`}>
             <SpanStyled
                 label={label}
                 shadowOpacity={shadowOpacity}
@@ -70,7 +80,7 @@ const HeaderTitle = ({ align = 'center', className, label, labelClassName, shado
                 {label}
             </SpanStyled>
             {children}
-        </div>
+        </AnimatedMotion>
     )
 }
 

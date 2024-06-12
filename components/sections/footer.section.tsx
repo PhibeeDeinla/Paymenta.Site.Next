@@ -1,12 +1,14 @@
 import styles from '@/assets/styles/footer.module.scss'
 import type { TFooterLinkProps, TSocialLinkProps } from '@/types/types'
-import Image from 'next/image'
 import groupBy from 'lodash/groupBy'
 import map from 'lodash/map'
+import Image from 'next/image'
 
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa'
-import Logo from '@/assets/images/dssc_logo.png'
+import PaymentaLogo from '@/assets/images/paymenta_logo_white.png'
+import { fadeInDown, fadeInUp } from '@/utils/animation'
 import Link from 'next/link'
+import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
+import AnimatedMotion from '../animated/AnimateMotion'
 import Input from '../input'
 
 const footerLinkList: TFooterLinkProps[] = [
@@ -127,12 +129,17 @@ const FooterSection = (props: Props) => {
                     href="#"
                     className="flex items-center space-x-3 rtl:space-x-reverse">
                     <Image
-                        src={Logo}
-                        alt=""
+                        src={PaymentaLogo}
+                        alt="Paymenta Logo"
+                        className="h-16 w-auto"
                     />
                 </a>
 
-                <div className="footer_outer_container grid lg:grid-cols-4 border-y-blue-600 border-y-2 mt-20 py-16 mb-10">
+                <AnimatedMotion
+                    variants={fadeInUp}
+                    animate="visible"
+                    initial="hidden"
+                    className="footer_outer_container grid lg:grid-cols-4 border-y-blue-600 border-y-2 mt-20 py-16 mb-10">
                     {/* Footer Links */}
                     <div className="footer_links_container col-span-3 grid lg:grid-cols-4 gap-4">
                         {map(footerLinkListGrouped, (groupItem, key) => (
@@ -167,10 +174,14 @@ const FooterSection = (props: Props) => {
                             Subscribe
                         </Link>
                     </div>
-                </div>
+                </AnimatedMotion>
 
                 {/* Footer Bottom */}
-                <div className="text-white flex flex-col lg:flex-row justify-between">
+                <AnimatedMotion
+                    variants={fadeInDown}
+                    animate="visible"
+                    initial="hidden"
+                    className="text-white flex flex-col lg:flex-row justify-between">
                     <div className="text-xl tracking-wide font-light mb-10 text-center lg:text-left">
                         Copyright &copy; 2024.
                         <br className="lg:hidden" />
@@ -191,7 +202,7 @@ const FooterSection = (props: Props) => {
                             ))}
                         </ul>
                     </div>
-                </div>
+                </AnimatedMotion>
             </div>
         </div>
     )

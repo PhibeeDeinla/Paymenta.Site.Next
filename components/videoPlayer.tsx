@@ -10,7 +10,7 @@ const VideoPlayer = (props: Props) => {
     return (
         <div className="video_player">
             <button
-                className="relative flex justify-center items-center focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 rounded-3xl group"
+                className="w-full relative flex justify-center items-center focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 rounded-3xl group"
                 aria-label="Watch the video">
                 <Image
                     className="rounded-3xl shadow-2xl transition-shadow duration-300 ease-in-out"

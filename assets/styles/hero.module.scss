@@ -3,11 +3,22 @@
 .heroSection {
     background-color: $primary-color;
     padding-top: 120px;
+    position: relative;
+    position: relative;
+}
 
+.heroSectionOverlayBg {
     background-image: url('../images/hero_donut_gradient_1.png'), url('../images/hero_donut_gradient_2.png'), url('../images/hero_donut_gradient_3.png');
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: top left, bottom left, top right;
-    position: relative;
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    mix-blend-mode: lighten;
+    opacity: 0.4;
 }
 
 .heroSpan {

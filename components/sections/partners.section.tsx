@@ -12,6 +12,8 @@ import BANCORE from '@/assets/images/partners/bancore.png'
 import AMAL from '@/assets/images/partners/amal.png'
 import BananaPay from '@/assets/images/partners/banana.png'
 import BSystems from '@/assets/images/partners/bsystems.png'
+import AnimatedMotion from '../animated/AnimateMotion'
+import { staggerChildren, staggerContainer } from '@/utils/animation'
 
 const partnersList: TPartnerProps[] = [
     {
@@ -66,17 +68,22 @@ const PartnerSection = (props: Props) => {
                 </HeaderTitle>
 
                 {/* Partners Company Logos */}
-                <div className="grid lg:grid-cols-3 gap-4 h-full items-center px-20 lg:px-0">
+                <AnimatedMotion
+                    variants={staggerContainer}
+                    initial="hidden"
+                    className="grid lg:grid-cols-3 gap-4 h-full items-center px-20 lg:px-0">
                     {partnersList.map(({ icon, ...item }) => (
-                        <div className="inline-flex flex-col items-center justify-center py-5 lg:px-20">
+                        <AnimatedMotion
+                            variants={staggerChildren}
+                            className="inline-flex flex-col items-center justify-center py-5 lg:px-20">
                             <Image
                                 src={icon}
                                 alt={item.title}
                                 className="grayscale opacity-60 hover:opacity-100 hover:grayscale-0 ease-in transition-all"
                             />
-                        </div>
+                        </AnimatedMotion>
                     ))}
-                </div>
+                </AnimatedMotion>
             </div>
         </div>
     )
