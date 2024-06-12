@@ -4,6 +4,11 @@ import path from 'path'
 const __dirname = path.resolve()
 
 const nextConfig = {
+    reactStrictMode: true,
+    basePath: '/paymenta-nextjs',
+    // distDir: 'build',
+    output: 'export',
+
     webpack(config) {
         config.module.rules.push({
             test: /\.svg$/,
