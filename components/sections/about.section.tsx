@@ -25,7 +25,7 @@ const AboutSection = (props: Props) => {
                         />
 
                         <p className="text-white leading-8 font-thin tracking-wide">
-                            At DSSC, we are passionate about revolutionizing the financial industry through innovative design solutions. Our team of experienced
+                            At Paymenta, we are passionate about revolutionizing the financial industry through innovative design solutions. Our team of experienced
                             designers combine cutting-edge technology with user-centered design principles to create seamless and intuitive fintech products. We
                             believe that good design goes beyond aesthetics; it is about creating products that are user-friendly, functional, and visually
                             appealing. By focusing on user experience, we aim to simplify complex financial processes and empower users to take control of their

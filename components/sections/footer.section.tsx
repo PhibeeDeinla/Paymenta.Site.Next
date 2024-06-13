@@ -185,7 +185,7 @@ const FooterSection = (props: Props) => {
                     <div className="text-xl tracking-wide font-light mb-10 text-center lg:text-left">
                         Copyright &copy; 2024.
                         <br className="lg:hidden" />
-                        DSSC Tech | All Rights Reserved.
+                        Paymenta | All Rights Reserved.
                     </div>
                     <div>
                         {/* Social links */}
