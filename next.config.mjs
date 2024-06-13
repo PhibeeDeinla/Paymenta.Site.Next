@@ -4,10 +4,11 @@ import path from 'path'
 const __dirname = path.resolve()
 
 const nextConfig = {
-    output: "export",
+    output: 'export',
     reactStrictMode: true,
     images: { unoptimized: true },
-    
+    distDir: 'build',
+
     webpack(config) {
         config.module.rules.push({
             test: /\.svg$/,
