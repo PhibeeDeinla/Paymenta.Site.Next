@@ -7,6 +7,11 @@ const nextConfig = {
     reactStrictMode: true,
     basePath: '/paymenta-nextjs',
     // distDir: 'build',
+    experimental: {
+        images: {
+            unoptimized: true,
+        },
+    },
     output: 'export',
 
     webpack(config) {
