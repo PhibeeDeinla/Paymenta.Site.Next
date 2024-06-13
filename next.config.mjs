@@ -8,9 +8,8 @@ const nextConfig = {
     basePath: '/paymenta-nextjs',
     // distDir: 'build',
     experimental: {
-        images: {
-            unoptimized: true,
-        },
+        outputFileTracingRoot: path.join(__dirname, "../../"),
+        esmExternals: false,
     },
     output: 'export',
 
