@@ -49,14 +49,15 @@ const PartnerSection = (props: Props) => {
                 {/* Partners Company Logos */}
                 <div className="overflow-x-hidden">
                     <div className="flex items-center justify-center gap-x-4 pt-0 pb-12 whitespace-nowrap ">
-                        {partnersList.map(({ icon, ...item }, indx) => (
-                            <span>
+                        {partnersList.map(({ icon, ...item }, idx) => (
+                            <div key={idx}>
                                 <Image
+                                    key={idx}
                                     src={icon}
                                     alt={item.title}
                                     className="min-w-20 transform scale-50 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 ease-in transition-all"
                                 />
-                            </span>
+                            </div>
                         ))}
                     </div>
                 </div>

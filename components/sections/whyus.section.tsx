@@ -86,10 +86,10 @@ const WhyUsSection = (props: Props) => {
                             <div className={'font-normal py-2 text-2xl'}>Simplify Your Life with Paymenta</div>
                         </h2>
                         <p className={'text-gray-800 tracking-wide font-light leading-8'}>
-                            WIn today’s fast-paced world, managing various aspects of your daily life can be overwhelming. That's why we created Paymenta, an
-                            all-in-one mobile app designed to simplify your life. From financial management to social networking, shopping, purchasing airtime,
-                            utility payments, business-to-business transacting, buying and selling crypto, and rewards, Paymenta is your go-to solution for
-                            everything you need.
+                            WIn today’s fast-paced world, managing various aspects of your daily life can be overwhelming. That&quote;s why we created Paymenta,
+                            an all-in-one mobile app designed to simplify your life. From financial management to social networking, shopping, purchasing
+                            airtime, utility payments, business-to-business transacting, buying and selling crypto, and rewards, Paymenta is your go-to solution
+                            for everything you need.
                         </p>
                     </div>
                 </div>
