@@ -6,6 +6,8 @@ import FooterSection from '@/components/sections/footer.section'
 import HeroSection from '@/components/sections/hero.section'
 import PartnerSection from '@/components/sections/partners.section'
 import ServicesSection from '@/components/sections/services.section'
+import VisionSection from '@/components/sections/vision.section'
+import WhyUsSection from '@/components/sections/whyus.section'
 
 type Props = {}
 
@@ -15,10 +17,13 @@ const Page = (props: Props) => {
             <NavBar />
             <main>
                 <HeroSection />
-                <FeatureSection />
+                <PartnerSection />
+                <VisionSection />
+                <WhyUsSection />
+                {/*<FeatureSection />*/}
                 <ServicesSection />
                 <AboutSection />
-                <PartnerSection />
+
                 <CTASection />
             </main>
             <FooterSection />

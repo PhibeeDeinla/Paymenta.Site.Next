@@ -13,8 +13,8 @@ type Props = {}
 
 const HeroSection = (props: Props) => {
     return (
-        <div className="bg-[#F7F9FF]">
-            <div className={`${styles.heroSection} masked-me`}>
+        <div className="">
+            <div className={`${styles.heroSection} masked-me overflow-hidden`}>
                 <div className={`px-4 max-w-screen-2xl mx-auto h-full relative z-10`}>
                     <div className="h-full lg:flex lg:flex-row items-center">
                         <div className="lg:basis-1/2 space-y-8 mx-50">
@@ -28,8 +28,7 @@ const HeroSection = (props: Props) => {
                                     },
                                 }}
                                 className="text-white text-3xl md:text-5xl font-semibold tracking-wide">
-                                Revolutionizing the Way
-                                <br /> You Handle <span className={`${styles.heroSpan}`}>Finances</span>
+                                Welcome to the forefront of financial innovation with <span className={`${styles.heroSpan}`}>Paymenta</span>
                             </AnimatedMotion>
                             <AnimatedMotion
                                 as="p"
@@ -41,7 +40,7 @@ const HeroSection = (props: Props) => {
                                         transition: { delay: 0.5 },
                                     },
                                 }}
-                                className="text-white pb-2 lg:pb-10 leading-8 tracking-wide max-w-[600px]">
+                                className="text-white pb-2 lg:pb-10 leading-6 tracking-wide max-w-[600px]">
                                 Stay on top of your money and make informed decisions with our user-friendly interface and cutting-edge features. Experience the
                                 future of banking at your fingertips.
                             </AnimatedMotion>

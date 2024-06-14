@@ -15,7 +15,7 @@ const menus: TLinkProps[] = [
     },
     {
         href: '#',
-        title: 'Features',
+        title: 'Vision',
     },
     {
         href: '#',
@@ -24,10 +24,6 @@ const menus: TLinkProps[] = [
     {
         href: '#',
         title: 'About Us',
-    },
-    {
-        href: '#',
-        title: 'Partners',
     },
 ]
 

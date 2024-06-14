@@ -1,7 +1,6 @@
 @import './variable.module.scss';
 
 .partnersSection {
-    min-height: 800px;
-
-    @apply lg:pb-40;
+  height: 0;
+  @apply pb-[85px]
 }
