@@ -15,7 +15,7 @@ const CTASection = (props: Props) => {
         <AnimatedMotion
             variants={fadeInUp}
             initial="hidden"
-            className={`w-full md:px-4 h-full flex flex-col justify-center lg:py-0 mx-30 md:mb-32`}>
+            className={`w-full md:px-4 h-full flex flex-col justify-center lg:py-0 mx-30 mt-20 md:mb-32`}>
             <div className="flex justify-center">
                 <div className={`${styles.ctaSection} w-full h-full md:rounded-3xl flex lg:flex-row items-center max-w-[1250px] sm:px-10 lg:px-5`}>
                     <div className="lg:basis-3/4 lg:pr-[200px] py-10 lg:px-10">

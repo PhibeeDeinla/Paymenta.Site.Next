@@ -1,7 +1,7 @@
 import styles from '@/assets/styles/partners.module.scss'
 import type { TPartnerProps } from '@/types/types'
 import Image from 'next/image'
-import HeaderTitle from '../headerTitle'
+import { staggerChildren, staggerContainer } from '@/utils/animation'
 
 import Guulpay from '@/assets/images/partners/guulpay.png'
 import PayQuick from '@/assets/images/partners/payquick.png'
@@ -13,7 +13,7 @@ import AMAL from '@/assets/images/partners/amal.png'
 import BananaPay from '@/assets/images/partners/banana.png'
 import BSystems from '@/assets/images/partners/bsystems.png'
 import AnimatedMotion from '../animated/AnimateMotion'
-import { staggerChildren, staggerContainer } from '@/utils/animation'
+import MiniLabel from '@/components/miniLabel'
 
 const partnersList: TPartnerProps[] = [
     {
@@ -33,24 +33,8 @@ const partnersList: TPartnerProps[] = [
         title: 'SwiftPayment',
     },
     {
-        icon: KEGOW,
-        title: 'SwiftPayment',
-    },
-    {
-        icon: BANCORE,
-        title: 'BANCORE',
-    },
-    {
-        icon: AMAL,
-        title: 'AMAL Express',
-    },
-    {
         icon: BananaPay,
         title: 'BananaPay',
-    },
-    {
-        icon: BSystems,
-        title: 'BSystems',
     },
 ]
 
@@ -59,32 +43,23 @@ type Props = {}
 const PartnerSection = (props: Props) => {
     return (
         <div className={`${styles.partnersSection}`}>
-            <div className="px-4 max-w-screen-2xl mx-auto h-full py-20 lg:py-32">
-                <HeaderTitle
-                    label="Partners"
-                    className="lg:pt-32 lg:mb-20"
-                    align="center">
-                    <small className="block font-normal text-[16px] mt-5 text-gray-400">TRUSTED BY SOME AFFILIATE COMPANIES</small>
-                </HeaderTitle>
+            <div className="px-4 max-w-screen-2xl mx-auto h-full text-center transform translate-y-[-60px]">
+                <MiniLabel label={'OUR TRUSTED PARTNERS'} />
 
                 {/* Partners Company Logos */}
-                <AnimatedMotion
-                    variants={staggerContainer}
-                    initial="hidden"
-                    className="grid lg:grid-cols-3 gap-4 h-full items-center px-20 lg:px-0">
-                    {partnersList.map(({ icon, ...item }, indx) => (
-                        <AnimatedMotion
-                        key={indx}
-                            variants={staggerChildren}
-                            className="inline-flex flex-col items-center justify-center py-5 lg:px-20">
-                            <Image
-                                src={icon}
-                                alt={item.title}
-                                className="grayscale opacity-60 hover:opacity-100 hover:grayscale-0 ease-in transition-all"
-                            />
-                        </AnimatedMotion>
-                    ))}
-                </AnimatedMotion>
+                <div className="overflow-x-hidden">
+                    <div className="flex items-center justify-center gap-x-4 pt-0 pb-12 whitespace-nowrap ">
+                        {partnersList.map(({ icon, ...item }, indx) => (
+                            <span>
+                                <Image
+                                    src={icon}
+                                    alt={item.title}
+                                    className="min-w-20 transform scale-50 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 ease-in transition-all"
+                                />
+                            </span>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     )
