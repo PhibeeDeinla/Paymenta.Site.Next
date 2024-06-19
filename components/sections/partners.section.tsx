@@ -1,7 +1,10 @@
+'use client'
 import styles from '@/assets/styles/partners.module.scss'
+import 'swiper/css'
 import type { TPartnerProps } from '@/types/types'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper/modules'
 import Image from 'next/image'
-import { staggerChildren, staggerContainer } from '@/utils/animation'
 
 import Guulpay from '@/assets/images/partners/guulpay.png'
 import PayQuick from '@/assets/images/partners/payquick.png'
@@ -12,7 +15,6 @@ import BANCORE from '@/assets/images/partners/bancore.png'
 import AMAL from '@/assets/images/partners/amal.png'
 import BananaPay from '@/assets/images/partners/banana.png'
 import BSystems from '@/assets/images/partners/bsystems.png'
-import AnimatedMotion from '../animated/AnimateMotion'
 import MiniLabel from '@/components/miniLabel'
 
 const partnersList: TPartnerProps[] = [
@@ -36,6 +38,22 @@ const partnersList: TPartnerProps[] = [
         icon: BananaPay,
         title: 'BananaPay',
     },
+    {
+        icon: KEGOW,
+        title: 'KEGOW',
+    },
+    {
+        icon: AMAL,
+        title: 'AMAL',
+    },
+    {
+        icon: BSystems,
+        title: 'BSystems',
+    },
+    {
+        icon: BANCORE,
+        title: 'BANCORE',
+    },
 ]
 
 type Props = {}
@@ -49,16 +67,27 @@ const PartnerSection = (props: Props) => {
                 {/* Partners Company Logos */}
                 <div className="overflow-x-hidden">
                     <div className="flex items-center justify-center gap-x-4 pt-0 pb-12 whitespace-nowrap ">
-                        {partnersList.map(({ icon, ...item }, idx) => (
-                            <div key={idx}>
-                                <Image
-                                    key={idx}
-                                    src={icon}
-                                    alt={item.title}
-                                    className="min-w-20 transform scale-50 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 ease-in transition-all"
-                                />
-                            </div>
-                        ))}
+                        <Swiper
+                            modules={[Autoplay]}
+                            spaceBetween={0}
+                            slidesPerView={4}
+                            loop
+                            speed={6000}
+                            autoplay={{
+                                delay: 100,
+                                disableOnInteraction: false,
+                            }}>
+                            {partnersList.map(({ icon, ...item }, idx) => (
+                                <SwiperSlide key={idx}>
+                                    <Image
+                                        key={idx}
+                                        src={icon}
+                                        alt={item.title}
+                                        className="min-w-20 transform scale-50 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 ease-in transition-all"
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                 </div>
             </div>
