@@ -29,8 +29,10 @@ type Props = {}
 
 const ServicesSection = (props: Props) => {
     return (
-        <div className={`${styles.servicesSection}`}>
-            <div className="px-4 max-w-screen-2xl mx-auto h-full py-20 lg:py-32">
+        <div
+            id={'services'}
+            className={`${styles.servicesSection}`}>
+            <div className="px-4 md:px-10 max-w-screen-2xl mx-auto h-full py-20 lg:py-32">
                 <div className="lg:grid lg:grid-cols-4 gap-4 h-full items-center">
                     <div className="col-span-1 self-baseline mb-10">
                         <HeaderTitle

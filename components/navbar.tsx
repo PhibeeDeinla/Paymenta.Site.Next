@@ -10,19 +10,19 @@ import { IoMenuOutline } from 'react-icons/io5'
 
 const menus: TLinkProps[] = [
     {
-        href: '#',
+        href: 'home',
         title: 'Home',
     },
     {
-        href: '#',
+        href: 'vision',
         title: 'Vision',
     },
     {
-        href: '#',
+        href: 'services',
         title: 'Services',
     },
     {
-        href: '#',
+        href: 'about-us',
         title: 'About Us',
     },
 ]
@@ -54,6 +54,12 @@ const NavBar = (props: Props) => {
     //Handles the opening and closing of our nav
     const handleClick = () => {
         setIsOpen(!isOpen)
+    }
+
+    const scrollToHash = function (element_id: string) {
+        const element = document.getElementById(element_id)
+        const CurrentTop = element ? element?.offsetTop - 70 : 0
+        window.scrollTo({ behavior: 'smooth', top: CurrentTop })
     }
 
     return (
@@ -96,13 +102,13 @@ const NavBar = (props: Props) => {
                         {menus.map((item, indx) => (
                             <li
                                 key={indx}
-                                className="w-full py-3 md:w-auto hover:bg-blue-600 md:rounded-full">
-                                <Link
-                                    href={item.href}
+                                className="w-full md:w-auto">
+                                <a
+                                    onClick={() => scrollToHash(item.href)}
                                     title={item.title}
-                                    className={`${item.className} ${styles.navbarAnchor} px-4 block whitespace-nowrap`}>
+                                    className={`${item.className} ${styles.navbarAnchor} px-4 block hover:cursor-pointer whitespace-nowrap md:rounded-full py-3 transition ease-in-out delay-150 bg-transparent hover:bg-blue-700 duration-300">`}>
                                     {item.title}
-                                </Link>
+                                </a>
                             </li>
                         ))}
                     </ul>
@@ -118,22 +124,22 @@ const NavBar = (props: Props) => {
                             <li
                                 key={indx}
                                 className="w-full py-3 md:w-auto lg:py-0 hover:bg-blue-600 md:rounded-full">
-                                <Link
-                                    href={item.href}
+                                <a
+                                    onClick={() => scrollToHash(item.href)}
                                     title={item.title}
-                                    className={`${item.className} ${styles.navbarAnchor} px-4 block`}>
+                                    className={`${item.className} ${styles.navbarAnchor} px-4 block hover:cursor-pointer`}>
                                     {item.title}
-                                </Link>
+                                </a>
                             </li>
                         ))}
 
                         <li className="w-full py-3 md:w-auto lg:py-0">
-                            <Link
+                            <a
                                 href={`#`}
                                 title="Contacts"
                                 className={`${styles.navbarAnchor} px-4`}>
                                 Contacts
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                 </div>
