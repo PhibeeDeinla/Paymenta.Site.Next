@@ -13,9 +13,11 @@ type Props = {}
 
 const HeroSection = (props: Props) => {
     return (
-        <div className="">
+        <div
+            id={'home'}
+            className="">
             <div className={`${styles.heroSection} masked-me overflow-hidden`}>
-                <div className={`px-4 max-w-screen-2xl mx-auto h-full relative z-10`}>
+                <div className={`px-10 max-w-screen-2xl mx-auto h-full relative z-10`}>
                     <div className="h-full lg:flex lg:flex-row items-center">
                         <div className="lg:basis-1/2 space-y-8 mx-50">
                             <AnimatedMotion

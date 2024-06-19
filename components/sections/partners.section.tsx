@@ -43,7 +43,7 @@ type Props = {}
 const PartnerSection = (props: Props) => {
     return (
         <div className={`${styles.partnersSection}`}>
-            <div className="px-4 max-w-screen-2xl mx-auto h-full text-center transform translate-y-[-60px]">
+            <div className="px-4 md:px-10 max-w-screen-2xl mx-auto h-full text-center transform translate-y-[-60px]">
                 <MiniLabel label={'OUR TRUSTED PARTNERS'} />
 
                 {/* Partners Company Logos */}

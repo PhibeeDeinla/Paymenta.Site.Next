@@ -9,7 +9,9 @@ type Props = {}
 
 const VisionSection = (props: Props) => {
     return (
-        <div className="px-10 max-w-screen-2xl mx-auto h-full">
+        <div
+            id={'vision'}
+            className="px-4 md:px-10 max-w-screen-2xl mx-auto h-full">
             <div className={`flex flex-col lg:flex-row lg:h-[650px] lg:mb-32 pt-10`}>
                 <div className={'lg:basis-1/4'}></div>
                 <div className={'lg:basis-3/4 relative space-y-10'}>

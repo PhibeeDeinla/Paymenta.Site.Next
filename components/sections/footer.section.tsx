@@ -124,7 +124,7 @@ type Props = {}
 const FooterSection = (props: Props) => {
     return (
         <div className={`${styles.footerSection} `}>
-            <div className="px-4 max-w-screen-2xl mx-auto h-full py-20 lg:py-32">
+            <div className="px-4 md:px-10 max-w-screen-2xl mx-auto h-full py-20 lg:py-32">
                 <a
                     href="#"
                     className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -144,12 +144,12 @@ const FooterSection = (props: Props) => {
                     <div className="footer_links_container col-span-3 grid lg:grid-cols-4 gap-4">
                         {map(footerLinkListGrouped, (groupItem, key) => (
                             <div className="mb-5">
-                                <div className="text-white uppercase mb-4 text-2xl font-bold tracking-wide text-center lg:text-left">{key}</div>
+                                <div className="text-white uppercase mb-4 text-xl font-bold tracking-wide text-center lg:text-left">{key}</div>
                                 <ul className="leading-[50px]">
-                                    {map(groupItem, (item) => (
-                                        <li>
+                                    {map(groupItem, (item, indx) => (
+                                        <li key={indx}>
                                             <a
-                                                className="text-white text-xl font-light tracking-wide hover:underline"
+                                                className="text-white text-md font-light tracking-wide hover:underline"
                                                 href={item.href}>
                                                 {item.title}
                                             </a>
@@ -162,7 +162,7 @@ const FooterSection = (props: Props) => {
 
                     {/* Subscription to newsletter */}
                     <div className="col-span-1">
-                        <h2 className="text-white uppercase text-2xl font-bold pb-8">Subscribe to our Newsletter</h2>
+                        <h2 className="text-white uppercase text-xl font-bold pb-8">Subscribe to our Newsletter</h2>
                         <p className="text-white pb-8 text-[17px] tracking-wide font-extralight opacity-60">
                             Subscribe today to receive the latest updates, exclusive content, and valuable insights delivered right to your inbox.
                         </p>
