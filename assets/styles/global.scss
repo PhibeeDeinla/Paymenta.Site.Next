@@ -109,3 +109,37 @@
         z-index: -1;
     }
 }
+
+.swiper-horizontal{
+    position: relative !important;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: 5;
+        width: 6rem;
+        top: 0;
+        bottom: 0;
+    }
+    
+    &:before {
+        background-image: linear-gradient(to right,white,rgba(255,255,255,0));
+        left: 0;
+    }
+
+    &:after {
+        background-image: linear-gradient(270deg,white,rgba(255,255,255,0));
+        right: 0;
+    }
+}
+
+.swiper-slide{
+    align-self: center;
+    
+   
+    
+    & > img {
+        margin: 0 auto;
+    }
+}
