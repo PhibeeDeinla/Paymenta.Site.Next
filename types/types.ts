@@ -40,3 +40,8 @@ export interface TSocialLinkProps {
     title: string
     href: string
 }
+
+export interface TCarouselProps {
+    icon: StaticImageData | string
+    title: string
+}

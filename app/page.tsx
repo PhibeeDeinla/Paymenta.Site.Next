@@ -1,7 +1,7 @@
+import MaintenanceSection from '@/components/maintenance'
 import NavBar from '@/components/navbar'
 import AboutSection from '@/components/sections/about.section'
 import CTASection from '@/components/sections/cta.section'
-import FeatureSection from '@/components/sections/feature.section'
 import FooterSection from '@/components/sections/footer.section'
 import HeroSection from '@/components/sections/hero.section'
 import PartnerSection from '@/components/sections/partners.section'
@@ -14,19 +14,22 @@ type Props = {}
 const Page = (props: Props) => {
     return (
         <>
-            <NavBar />
-            <main>
-                <HeroSection />
-                <PartnerSection />
-                <VisionSection />
-                <WhyUsSection />
-                {/*<FeatureSection />*/}
-                <ServicesSection />
-                <AboutSection />
-
-                <CTASection />
-            </main>
-            <FooterSection />
+            {process.env.SITE_MODE === 'LIVE' && (
+                <>
+                    <NavBar />
+                    <main>
+                        <HeroSection />
+                        <PartnerSection />
+                        <VisionSection />
+                        <WhyUsSection />
+                        <ServicesSection />
+                        <AboutSection />
+                        <CTASection />
+                    </main>
+                    <FooterSection />
+                </>
+            )}
+            {process.env.SITE_MODE === 'COMING_SOON' && <MaintenanceSection />}
         </>
     )
 }
