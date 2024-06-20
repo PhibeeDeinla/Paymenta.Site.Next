@@ -40,8 +40,8 @@ const MaintenanceSection = (props: Props) => {
 
                         <div className="glass">
                             <p className="text-white font-light">
-                                In today’s fast-paced world, managing various aspects of your daily life can be overwhelming. That's why we created Paymenta, an
-                                all-in-one mobile app designed to simplify your life.
+                                In today&apos;s fast-paced world, managing various aspects of your daily life can be overwhelming. That&apos;s why we created
+                                Paymenta, an all-in-one mobile app designed to simplify your life.
                             </p>
                             <p className="text-white font-light">
                                 From financial management to social networking, shopping, purchasing airtime, utility payments, business-to-business
